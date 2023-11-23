@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: bry-tam-policies-by-tag
+  namespace: open-cluster-management-gitops
+spec:
+  generators:
+  - list:
+      elements:
+      - environment: dev
+        revision: dev-v0.1.0
+      - environment: prod
+        revision: prod-v0.1.0
+  template:
+    metadata:
+      name: 'bry-policies-{{environment}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com:bry-tam/acm-policy-samples.git
+        targetRevision: {{revision}}
+        path: environments/{{environment}}
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: bry-tam-policies-{{environment}}
+      syncPolicy:
+        syncPolicy:
+          automated:
+            prune: true
+            allowEmpty: true
+            selfHeal: false
+        syncOptions:
+          - CreateNamespace=true
+          - ApplyOutOfSyncOnly=true
+          - ServerSideApply=true
+          - Validate=false
+
