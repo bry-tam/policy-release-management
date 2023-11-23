@@ -10,7 +10,7 @@ spec:
   source:
     path: policy-manager/manage-by-tag
     repoURL: 'https://github.com/bry-tam/policy-release-managment.git'
-    targetRevision: HEAD
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
