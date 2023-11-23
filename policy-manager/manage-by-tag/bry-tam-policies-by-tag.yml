@@ -24,11 +24,10 @@ spec:
         server: 'https://kubernetes.default.svc'
         namespace: bry-tam-policies-{{environment}}
       syncPolicy:
-        syncPolicy:
-          automated:
-            prune: true
-            allowEmpty: true
-            selfHeal: false
+        automated:
+          prune: true
+          allowEmpty: true
+          selfHeal: false
         syncOptions:
           - CreateNamespace=true
           - ApplyOutOfSyncOnly=true
