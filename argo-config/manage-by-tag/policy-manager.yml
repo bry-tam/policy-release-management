@@ -17,8 +17,8 @@ spec:
       prune: true
       allowEmpty: true
       selfHeal: true
-  syncOptions:
-    - CreateNamespace=true
-    - ApplyOutOfSyncOnly=true
-    - ServerSideApply=true
-    - Validate=false
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+      - ServerSideApply=true
+      - Validate=false
