@@ -9,7 +9,7 @@ spec:
     namespace: open-cluster-management-gitops
   source:
     path: policy-manager/manage-by-tag
-    repoURL: 'https://github.com/bry-tam/policy-release-managment.git'
+    repoURL: 'https://github.com/bry-tam/policy-release-management.git'
     targetRevision: main
   project: default
   syncPolicy:
