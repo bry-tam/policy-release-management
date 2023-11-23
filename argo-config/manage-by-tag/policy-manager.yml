@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: bopen-cluster-management-gitops
+    namespace: open-cluster-management-gitops
   source:
     path: policy-manager/manage-by-tag
     repoURL: 'https://github.com/bry-tam/policy-release-managment.git'
