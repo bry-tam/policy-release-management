@@ -8,9 +8,9 @@ spec:
   - list:
       elements:
       - environment: dev
-        revision: dev-v0.1.0
+        revision: 'dev-v0.1.0'
       - environment: prod
-        revision: prod-v0.1.0
+        revision: 'prod-v0.1.0'
   template:
     metadata:
       name: 'bry-policies-{{environment}}'
@@ -18,11 +18,11 @@ spec:
       project: default
       source:
         repoURL: https://github.com/bry-tam/acm-policy-samples.git
-        targetRevision: {{revision}}
+        targetRevision: '{{revision}}'
         path: environments/{{environment}}
       destination:
         server: 'https://kubernetes.default.svc'
-        namespace: bry-tam-policies-{{environment}}
+        namespace: 'bry-tam-policies-{{environment}}'
       syncPolicy:
         automated:
           prune: true
