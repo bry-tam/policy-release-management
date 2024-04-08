@@ -8,7 +8,7 @@ spec:
   - list:
       elements:
       - environment: dev
-        revision: 'v1.1.3-20240408'
+        revision: 'v1.1.4-20240408'
       - environment: prod
         revision: 'v1.1.3-20240408'
   template:
