@@ -8,9 +8,9 @@ spec:
   - list:
       elements:
       - environment: dev
-        revision: 'v1.0-20231215'
+        revision: 'v1.1.3-20240408'
       - environment: prod
-        revision: 'v1.0-20231215'
+        revision: 'v1.1.3-20240408'
   template:
     metadata:
       name: 'bry-policies-{{environment}}'
