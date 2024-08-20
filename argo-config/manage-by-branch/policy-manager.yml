@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: policy-manager
-  namespace: open-cluster-management-gitops
+  namespace: openshift-gitops
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: open-cluster-management-gitops
+    namespace: openshift-gitops
   source:
     path: policy-manager/manage-by-branch
     repoURL: 'https://github.com/bry-tam/policy-release-management.git'
