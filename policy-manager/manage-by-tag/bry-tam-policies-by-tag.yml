@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: bry-tam-policies-by-tag
-  namespace: open-cluster-management-gitops
+  namespace: openshift-gitops
 spec:
   generators:
   - list:
